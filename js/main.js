@@ -3,7 +3,7 @@ elCard.classList.add('container', 'pokemon-main', 'pb-5')
 
 var mainImg = document.createElement('img')
 mainImg.classList.add('m-auto', 'd-block', 'mt-5', 'mb-5')
-mainImg.setAttribute('src', '../images/main-img.png')
+mainImg.setAttribute('src', '../img/main-img.svg')
 
 var elForm = document.createElement('form');
 elForm.classList.add('class', 'form', 'd-flex', 'w-100', 'mb-5', 'justify-content-center', 'pb-5')
