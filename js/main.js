@@ -1,83 +1,83 @@
 var elCard = document.createElement('div')
 elCard.classList.add('container', 'pokemon-main', 'pb-5')
 
-var mainImg = document.createElement('img')
-mainImg.classList.add('m-auto', 'd-block', 'mt-5', 'mb-5')
-mainImg.setAttribute('src', '../img/main-img.svg')
+var saytImg = document.createElement('img')
+saytImg.classList.add('m-auto', 'd-block', 'mt-4', 'mb-4')
+saytImg.setAttribute('src', '../img/main-img.svg')
 
-var elForm = document.createElement('form');
-elForm.classList.add('class', 'form', 'd-flex', 'w-100', 'mb-5', 'justify-content-center', 'pb-5')
+var formWrapper = document.createElement('form');
+formWrapper.classList.add('class', 'form-wrapper', 'd-flex', 'w-100', 'mb-5', 'justify-content-center', 'pb-5')
 
-var elSelect = document.createElement('select');
-elSelect.classList.add('class', 'form__select', 'col-2', 'p-2', 'text-center', 'p-2')
+var selectForm = document.createElement('select');
+selectForm.classList.add('class', 'select-form', 'col-2', 'p-2', 'text-center', 'p-2')
 
-var elSelectOption = document.createElement('option')
-elSelectOption.textContent = 'Gross';
+var selectWrapperOption = document.createElement('option')
+selectWrapperOption.textContent = 'Gross';
 
 
-var elSelectLetters = document.createElement('select');
-elSelectLetters.classList.add('class', 'form__select__letters', 'col-2', 'text-center')
+var lettersSelectrForm = document.createElement('select');
+lettersSelectrForm.classList.add('class', 'form__letters', 'col-2', 'text-center')
 
-var elSelectLettersOption = document.createElement('option')
-elSelectLettersOption.textContent = 'Aa-Zz';
+var lettersFormOption = document.createElement('option')
+lettersFormOption.textContent = 'Aa-Zz';
 
-var elSearch = document.createElement('input');
-elSearch.setAttribute('placeholder', 'Search')
-elSearch.setAttribute('type', 'search')
-elSearch.classList.add('class', 'form__control', 'col-2', 'p-2')
+var search = document.createElement('input');
+search.setAttribute('placeholder', 'Search')
+search.setAttribute('type', 'search')
+search.classList.add('class', 'form-text', 'col-2', 'p-2')
 
-var elBtn = document.createElement('button');
-elBtn.textContent = 'Button';
-elBtn.classList.add('class', 'btn')
+var btn = document.createElement('button');
+btn.textContent = 'Button';
+btn.classList.add('class', 'btn')
 
-var elList = document.createElement('ul');
-elList.classList.add('pokemon-list', 'd-flex', 'list-unstyled', 'flex-wrap', 'justify-content-center', 'mb-5')
+var list = document.createElement('ul');
+list.classList.add('list', 'd-flex', 'list-unstyled', 'flex-wrap', 'justify-content-center', 'mb-5')
 
 for (var i = 0; i < pokemons.length; i++) {
-  elLi = document.createElement('li');
-  elLi.classList.add('pokemon-list-item', 'card-header')
+  listItme = document.createElement('li');
+  listItme.classList.add('list-item',)
 
-  elLine = document.createElement('hr');
-  elLine.classList.add('card-line')
+  listLine = document.createElement('hr');
+  listLine.classList.add('pokimon-line')
 
-  elImg = document.createElement('img')
-  elImg.setAttribute('src', pokemons[i].img)
-  elImg.classList.add('pokemons-image', 'm-auto', 'mt-3', 'd-block')
-  elImg.setAttribute('width', '157')
-  elImg.setAttribute('height', '157')
+  listItmeImg = document.createElement('img')
+  listItmeImg.setAttribute('src', pokemons[i].img)
+  listItmeImg.classList.add('pokemons-image', 'm-auto', 'mt-3', 'd-block')
+  listItmeImg.setAttribute('width', '157')
+  listItmeImg.setAttribute('height', '157')
 
-  elName = document.createElement('h3');
-  elName.textContent = pokemons[i].name;
-  elName.setAttribute('class', 'pokemon-name');
+  pokimonName = document.createElement('h3');
+  pokimonName.textContent = pokemons[i].name;
+  pokimonName.setAttribute('class', 'pokimon-name');
 
-  elTitle = document.createElement('p');
-  elTitle.textContent = pokemons[i].type;
-  elTitle.setAttribute('class', 'pokemon-title');
+  pokimonTitle = document.createElement('p');
+  pokimonTitle.textContent = pokemons[i].type;
+  pokimonTitle.setAttribute('class', 'pokimon-title');
 
-  elWeight = document.createElement('p');
-  elWeight.textContent = pokemons[i].weight;
-  elWeight.classList.add('pokemon-weight', 'd-inline-block', 'me-4');
+  pokimonWeight = document.createElement('p');
+  pokimonWeight.textContent = pokemons[i].weight;
+  pokimonWeight.classList.add('pokimon-weight', 'd-inline-block', 'me-4');
 
-  elAge = document.createElement('p');
-  elAge.textContent = pokemons[i].age;
-  elAge.classList.add('pokemon-age', 'd-inline-block');
+  pokimonAge = document.createElement('p');
+  pokimonAge.textContent = pokemons[i].age;
+  pokimonAge.classList.add('pokimon-age', 'd-inline-block');
 
-  elLi.appendChild(elImg);
-  elLi.appendChild(elLine);
-  elLi.appendChild(elName);
-  elLi.appendChild(elTitle);
-  elLi.appendChild(elWeight);
-  elLi.appendChild(elAge);
-  elList.appendChild(elLi);
+  listItme.appendChild(listItmeImg);
+  listItme.appendChild(listLine);
+  listItme.appendChild(pokimonName);
+  listItme.appendChild(pokimonTitle);
+  listItme.appendChild(pokimonWeight);
+  listItme.appendChild(pokimonAge);
+  list.appendChild(listItme);
 
-  elCard.appendChild(mainImg);
-  elSelect.appendChild(elSelectOption)
-  elSelectLetters.appendChild(elSelectLettersOption)
-  elForm.appendChild(elSelect);
-  elForm.appendChild(elSearch);
-  elForm.appendChild(elSelectLetters);
-  elForm.appendChild(elBtn)
-  elCard.appendChild(elForm);
-  elCard.appendChild(elList);
+  elCard.appendChild(saytImg);
+  selectForm.appendChild(selectWrapperOption)
+  lettersSelectrForm.appendChild(lettersFormOption)
+  formWrapper.appendChild(selectForm);
+  formWrapper.appendChild(search);
+  formWrapper.appendChild(lettersSelectrForm);
+  formWrapper.appendChild(btn)
+  elCard.appendChild(formWrapper);
+  elCard.appendChild(list);
   document.body.appendChild(elCard);
 }

@@ -1,33 +1,36 @@
+body{
+    background-color: #FFCA28;
+}
+
 .pokemon-main {
-    .form {
+    .form-wrapper {
         gap: 40px;
-        .form__select, .form__select__letters, .form__control, .btn {
+        .select-form, .form__letters, .form-text, .btn {
             outline: none;
             border: none;
             background: #FFFFFF;
             border: 2px solid #000000;
             border-radius: 15px;
-            appearance: none;
         }
         .btn {
             width: 200px;
         }
     }
-    .pokemon-list {
+    .list {
         gap: 30px;
     }
-    .pokemon-list-item {
+    .list-item {
         width: 307px;
         padding: 30px;
         background: #FFFFFF;
         border: 2px solid #000000;
         border-radius: 20px;
-        .card-line {
+        .pokimon-line {
             width: 100%;
             height: 2px;
             background: #000000;
         }
-        .pokemon-name {
+        .pokimon-name {
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 700;
@@ -35,7 +38,7 @@
             line-height: 28px;
             color: #000000;
         }
-        .pokemon-title {
+        .pokimon-title {
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
@@ -43,7 +46,7 @@
             line-height: 23px;
             color: #000000;
         }
-        .pokemon-weight, .pokemon-age {
+        .pokimon-weight, .pokimon-age {
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 700;
