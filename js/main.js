@@ -14,6 +14,7 @@ elSelect.classList.add('class', 'form__select', 'col-2', 'p-2', 'text-center', '
 var elSelectOption = document.createElement('option')
 elSelectOption.textContent = 'Gross';
 
+
 var elSelectLetters = document.createElement('select');
 elSelectLetters.classList.add('class', 'form__select__letters', 'col-2', 'text-center')
 
@@ -32,7 +33,7 @@ elBtn.classList.add('class', 'btn')
 var elList = document.createElement('ul');
 elList.classList.add('pokemon-list', 'd-flex', 'list-unstyled', 'flex-wrap', 'justify-content-center', 'mb-5')
 
-for(var i = 0; i < pokemons.length; i++) {
+for (var i = 0; i < pokemons.length; i++) {
   elLi = document.createElement('li');
   elLi.classList.add('pokemon-list-item', 'card-header')
 
@@ -41,7 +42,7 @@ for(var i = 0; i < pokemons.length; i++) {
 
   elImg = document.createElement('img')
   elImg.setAttribute('src', pokemons[i].img)
-    elImg.classList.add('pokemons-image', 'm-auto', 'mt-3', 'd-block')
+  elImg.classList.add('pokemons-image', 'm-auto', 'mt-3', 'd-block')
   elImg.setAttribute('width', '157')
   elImg.setAttribute('height', '157')
 
@@ -55,7 +56,7 @@ for(var i = 0; i < pokemons.length; i++) {
 
   elWeight = document.createElement('p');
   elWeight.textContent = pokemons[i].weight;
-  elWeight.classList.add('pokemon-weight',  'd-inline-block', 'me-4');
+  elWeight.classList.add('pokemon-weight', 'd-inline-block', 'me-4');
 
   elAge = document.createElement('p');
   elAge.textContent = pokemons[i].age;
@@ -69,14 +70,14 @@ for(var i = 0; i < pokemons.length; i++) {
   elLi.appendChild(elAge);
   elList.appendChild(elLi);
 
-  elBox.appendChild(mainImg);
+  elCard.appendChild(mainImg);
   elSelect.appendChild(elSelectOption)
   elSelectLetters.appendChild(elSelectLettersOption)
   elForm.appendChild(elSelect);
   elForm.appendChild(elSearch);
   elForm.appendChild(elSelectLetters);
   elForm.appendChild(elBtn)
-  elBox.appendChild(elForm);
-  elBox.appendChild(elList);
-  document.body.appendChild(elBox);
+  elCard.appendChild(elForm);
+  elCard.appendChild(elList);
+  document.body.appendChild(elCard);
 }
